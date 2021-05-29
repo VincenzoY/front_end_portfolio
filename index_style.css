@@ -1,0 +1,25 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 4em;
+}
+
+.website-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 15em);
+    gap: 10px;
+    height: 45%;
+    width: 80%
+}
+
+.test {
+    background-color: black;
+}
+
+.horizontal-rect {
+    grid-column: span 2 / auto;
+}
