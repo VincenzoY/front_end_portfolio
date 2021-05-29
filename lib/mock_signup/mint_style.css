@@ -132,6 +132,8 @@ container div {
 
 .captcha-info p {
     font-size: 12px;
+    padding: 0 2em;
+    text-align: center;
 }
 
 .legal {
