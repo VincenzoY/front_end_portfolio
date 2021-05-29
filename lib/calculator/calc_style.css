@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', 'Times New Roman', Times, serif;
+    
+}
+
+#calculator {
+    height: 600px;
+    width: 400px;
+    background-color: #0D1B1E;
+    border: 2px black solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1%;
+}
+
+#screen {
+    height: 160px;
+    width: 360px;
+    background-color: #56666B;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.previous {
+    position: absolute;
+    font-size: 1.5em;
+    right: 3%;
+    top: 30%;
+    line-height: 1.5em;
+}
+
+.displayed {
+    position: absolute;
+    font-size: 3em;
+    right: 3%;
+    bottom: 0;
+}
+
+#buttons {
+    width: 360px;
+    height: 380px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0D1B1E;
+}
+
+
+
+#numbers {
+    display: inline-grid;
+    grid-gap: 15px 13.333px;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(4, 80px);
+    transform: translate(6px, 6px);
+    margin: 0;
+}
+
+.square {
+    border: 1px solid black;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 3em;
+    background-color: #7798AB;
+    box-sizing: border-box;
+}
+
+#operators {
+    display: inline-grid;
+    grid-gap: 0px;
+    grid-template-columns: 66.666px;
+    grid-template-rows: repeat(5, 72.8px);
+    transform: translate(13.333px, 2px);
+    background-color: #7798AB;
+}
+
+.rect {
+    border-top: 5px solid #0D1B1E;
+    border-right: 1px solid #0D1B1E;
+    border-left: 1px solid #0D1B1E;
+    box-sizing: border-box;
+    height: 73.333px;
+    width: 66.666px;
+    text-align: center;
+    line-height: 73.333px;
+    font-size: 3em;
+}
+
+#clear {
+    border-top: 0px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 0.5em;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    background-color: #0D1B1E;
+    font-family: 'Montserrat', 'Times New Roman', Times, serif;
+    color: grey;
+}

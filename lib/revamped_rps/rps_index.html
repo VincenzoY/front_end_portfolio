@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Revamped Rock Paper Scissors</title>
+    <link href="rps_style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet" type='text/css'>
+</head>
+<body>
+    <container class='title'>
+        <h1>Welcome to Rock Paper Scissors Game!</h1>
+    </container>
+    <container class='resultBox'>
+        <h2 class = 'result'>Welcome to the game.</h2>
+        <h2 class='score'>Choose your move to begin playing.</h2>
+    </container>
+    <container class='icons'>
+        <div class='rockIcon'>
+            <h4>Rock</h4>
+            <img src='Rock.png' alt='Rock' class='rock icon'>
+        </div>
+        <div class='paperIcon'>
+            <h4>Paper</h4>
+            <img src='Paper.png' alt='Paper' class='paper icon'>
+        </div>
+        <div class='scissorsIcon'>
+            <h4>Scissors</h4>
+            <img src='Scissors.png' alt='Scissors' class='scissors icon'>
+        </div>
+    </container>
+</body>
+<footer>
+    <h5>Made by Vincent</h5>
+</footer>
+</html>
+
+
+
+
+<script>
+    //1 is rock, 2 is paper, 3 is scissors
+    let numRounds = 5
+    let playerScore = 0;
+    let computerScore = 0;
+    let playerSelection = '';
+    let computerSelection = '';
+            
+    function computerPlay() {
+                switch (Math.floor(Math.random()*3)) {
+                case 0:
+                    return 'rock';
+                break;
+                case 1:
+                    return 'paper';
+                break;
+                case 2:
+                    return 'scissors';
+                break;
+                default:
+                    return 'not valid';
+                break;
+        }
+    }
+
+    function playRound(computerSelection, playerSelection) {
+            if ((computerSelection=="rock" && playerSelection=="rock") || (computerSelection=="paper" && playerSelection=="paper") || (computerSelection=="scissors" && playerSelection=="scissors")) {
+                return `It's a tie, you both chose ${computerSelection}!`;
+            } else if (computerSelection=="rock" && playerSelection=="paper") {
+                playerScore++;
+                return `You win, you chose ${playerSelection} and they chose ${computerSelection}!`;
+            } else if (computerSelection=="rock" && playerSelection=="scissors") {
+                computerScore++;
+                return `You lose, you chose ${playerSelection} and they chose ${computerSelection}!`;
+            } else if (computerSelection=="paper" && playerSelection=="rock") {
+                computerScore++;
+                return `You lose, you chose ${playerSelection} and they chose ${computerSelection}!`;
+            } else if (computerSelection=="paper" && playerSelection=="scissors") {
+                playerScore++;
+                return `You win, you chose ${playerSelection} and they chose ${computerSelection}!`;
+            } else if (computerSelection=="scissors" && playerSelection=="rock") {
+                playerScore++;
+                return `You win, you chose ${playerSelection} and they chose ${computerSelection}!`;
+            } else if (computerSelection=="scissors" && playerSelection=="paper") {
+                computerScore++;
+                return `You lose, you chose ${playerSelection} and they chose ${computerSelection}!`;
+            } else {
+                return `Sorry, an error occured during your game.`;
+            }
+    }
+
+    function reset() {
+        result.textContent = 'Welcome to the game.'
+        score.textContent = 'Choose your move to begin playing.'
+        playerScore = 0;
+        computerScore = 0;
+    }
+
+    
+    function overallScore() {
+        if (playerScore > computerScore) {
+            result.textContent =  `Congrats! You win ${playerScore} to ${computerScore}!`
+        } else if (playerScore == computerScore) {
+            result.textContent =  `It's a tie! You both had ${playerScore} wins`
+        } else {
+            result.textContent = `Nice try. You lost ${computerScore} to ${playerScore}.`
+        }
+
+        setTimeout(reset, 1000);
+    }
+
+    function checkOverall() {
+    if (playerScore == 5 || computerScore == 5) {
+        overallScore();
+    } else {
+        return;
+    }
+    }
+
+    const rock = document.querySelector('.rock')
+    const paper = document.querySelector('.paper')
+    const scissors = document.querySelector('.scissors')
+    const icons = document.querySelectorAll('.icon') 
+    const result = document.querySelector('.result')
+    const score = document.querySelector('.score')
+
+
+    function rockClick(){
+        isRockClicked = true;
+        playerSelection = "rock";
+        rock.classList.add('selected');
+        computerSelection = computerPlay();
+        result.textContent = `${playRound(computerSelection, playerSelection)}`
+        score.textContent = `The score is now ${playerScore} wins for you, ${computerScore} for the computer`;
+        isRockClicked = false;
+        checkOverall();
+    }
+
+    function paperClick(){
+        isPaperClicked = true;
+        playerSelection = "paper";
+        paper.classList.add('selected');
+        computerSelection = computerPlay();
+        result.textContent = `${playRound(computerSelection, playerSelection)}`;
+        score.textContent = `The score is now ${playerScore} wins for you, ${computerScore} for the computer`;
+        isPaperClicked = false;
+        checkOverall();
+    }
+
+    function scissorsClick(){
+        isScissorsClicked = true;
+        playerSelection = "scissors";
+        scissors.classList.add('selected');
+        computerSelection = computerPlay();
+        result.textContent = `${playRound(computerSelection, playerSelection)}`;
+        score.textContent = `The score is now ${playerScore} wins for you, ${computerScore} for the computer`;
+        isScissorsClicked = false;
+        checkOverall();
+    }
+
+    function removeTransition(e) {
+    if (e.propertyName !== 'transform') return;
+    this.classList.remove('selected');
+  }
+
+    icons.forEach(icon => icon.addEventListener('transitionend', removeTransition))
+
+    rock.addEventListener('click', rockClick);
+    paper.addEventListener('click', paperClick);
+    scissors.addEventListener('click', scissorsClick);
+
+
+</script>

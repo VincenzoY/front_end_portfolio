@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' type='text/css' href='calc_style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <container id='calculator'>
+        <div id='screen'>
+            <div class='previous'></div>
+            <div class='displayed'>Hello!</div>
+        </div>
+        <container id='buttons'>
+        <div id='numbers'>
+            <div id='one' class='square' data-key='49' data-shift='false'>1</div>
+            <div id='two'class='square' data-key='50' data-shift='false'>2</div>
+            <div id='three'class='square' data-key='51' data-shift='false'>3</div>
+            <div id='four'class='square' data-key='52' data-shift='false'>4</div>
+            <div id='five'class='square' data-key='53' data-shift='false'>5</div>
+            <div id='six'class='square' data-key='54' data-shift='false'>6</div>
+            <div id='seven'class='square' data-key='55' data-shift='false'>7</div>
+            <div id='eight'class='square' data-key='56' data-shift='false'>8</div>
+            <div id='nine'class='square' data-key='57' data-shift='false'>9</div>
+            <div id='decimal'class='square' data-key='190' data-shift='false'>.</div>
+            <div id='zero'class='square' data-key='48' data-shift='false'>0</div>
+            <div id='equals'class='square' data-key='13' data-shift='false'>=</div>
+        </div>
+        <div id='operators'>
+            <div id='clear' class='rect' data-key='8' data-shift='false'>C</div>
+            <div id='divide' class='rect' data-key='191' data-shift='false'>÷</div>
+            <div id='multiply' class='rect' data-key='56' data-shift='true'>x</div>
+            <div id='subtract' class='rect' data-key='189' data-shift='false'>-</div>
+            <div id='add' class='rect' data-key='187' data-shift='false'>+</div>
+        </div>
+        </container>
+    </container>
+</body>
+<footer>
+    <h5>Made by Vincent</h5>
+</footer>
+<script src='calc_script.js'></script>
+</html>

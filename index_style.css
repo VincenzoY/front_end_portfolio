@@ -29,12 +29,17 @@ body {
 
 a {
     text-decoration: none;
+    color: black;
     text-align: center;
     border: 3px black solid;
 }
 
 a:visited {
     color: inherit;
+}
+
+a div {
+    background-color: rgba(100,100,100,0.7);
 }
 
 /* Website Icons */
@@ -46,5 +51,20 @@ a:visited {
 
 .sketch {
     background: url("icon_imgs/sketchboard.png");
+    background-size: cover;
+}
+
+.calc {
+    background: url("icon_imgs/calc.png");
+    background-size: cover;
+}
+
+.rps {
+    background: url("icon_imgs/rps.png");
+    background-size: cover;
+}
+
+.mun {
+    background: url("icon_imgs/mun.png");
     background-size: cover;
 }
