@@ -68,3 +68,7 @@ a div {
     background: url("icon_imgs/mun.png");
     background-size: cover;
 }
+
+.youtube {
+    background: url("icon_imgs/youtube.png");
+}
