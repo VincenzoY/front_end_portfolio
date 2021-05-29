@@ -1,0 +1,1 @@
+This is the very first large scale project that I am trying to accomplish. Instead of just watching videos and doing code excersises, I'm finally let free to try to make a similar copy of the google homepage. Hopefully I'll be able to apply the skills I've learned along the way

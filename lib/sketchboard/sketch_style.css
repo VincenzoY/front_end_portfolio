@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: #DAF7DC;
+}
+
+h1 {
+    font-family: 'Montserrat', 'Times New Roman', Times, serif;
+    text-align: center;
+    position: absolute;
+    margin: 0;
+    background-color: #9EE493;
+    width: 100%;
+    height: auto;
+    padding: 0.5em 0;
+    z-index: 3;
+    outline: 8px #2F4858 solid;
+}
+
+.sketchbox {
+    display: grid;
+    width: 375px;
+    height: 375px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    transform: translate(-50%, -50%);
+    border: 8px #2F4858 solid;
+}
+
+.box {
+    background-color: #86BBD8;
+}
+
+.selected {
+    background-color: #336699;
+}
+
+.resetButton {
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    transform: translate(-115%, 400%);
+    background-color: #9EE493;
+    border: 8px #2F4858 solid;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Montserrat', 'Times New Roman', Times, serif
+}
+
+.resizeButton {
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    transform: translate(10%, 400%);
+    background-color: #9EE493;
+    border: 8px #2F4858 solid;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Montserrat', 'Times New Roman', Times, serif
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 0.5em;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    background-color: #9EE493;
+    font-family: 'Montserrat', 'Times New Roman', Times, serif
+}
