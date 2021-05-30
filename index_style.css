@@ -1,9 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 12px;
     margin-top: 4em;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #9DB4C0;
+}
+
+nav {
+    position: absolute;
+    top:0;
+    width: 100%;
+    text-align: center;
+    height: auto;
+}
+
+nav h1 {
+    margin: 1em 2em;
 }
 
 .website-container {
@@ -11,7 +27,6 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 15em);
     gap: 10px;
-    height: 45%;
     width: 80%
 }
 
@@ -27,11 +42,13 @@ body {
     grid-column: span 2 / auto;
 }
 
-a {
+.website-container a {
     text-decoration: none;
     color: black;
     text-align: center;
-    border: 3px black solid;
+    border: 3px #07090F solid;
+    overflow: hidden;
+    background-size: cover;
 }
 
 a:visited {
@@ -39,47 +56,90 @@ a:visited {
 }
 
 a div {
-    background-color: rgba(100,100,100,0.7);
+    background-color: rgba(92,107,115,0.8);
 }
 
 /* Website Icons */
 
 .google {
     background: url("icon_imgs/google_preview.png");
-    background-size: cover;
 }
 
 .sketch {
     background: url("icon_imgs/sketchboard.png");
-    background-size: cover;
 }
 
 .calc {
     background: url("icon_imgs/calc.png");
-    background-size: cover;
 }
 
 .rps {
     background: url("icon_imgs/rps.png");
-    background-size: cover;
 }
 
 .mun {
     background: url("icon_imgs/mun.png");
-    background-size: cover;
 }
 
 .youtube {
     background: url("icon_imgs/youtube.png");
-    background-size: cover;
 }
 
 .mint {
     background: url("icon_imgs/mint.png");
-    background-size: cover;
 }
 
 .tnw {
     background: url("icon_imgs/tnw.png");
-    background-size: cover;
+}
+
+/* Responsive design */
+
+@media (max-width:1173px) {
+    body {
+        margin-top: 6em;
+    }
+}
+
+@media (max-width:880px) {
+    .website-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 20em);
+    }
+
+    .horizontal-rect {
+        grid-column: span 1 / auto;
+    }
+}
+
+@media (max-width:790px) {
+    .website-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 20em);
+    }
+}
+
+@media (max-width:626px) {
+    body {
+        margin-top: 8em;
+    }
+}
+
+@media (max-width:468px) {
+    body {
+        margin-top: 10em;
+    }
+}
+
+@media (max-width:450px) {
+    .website-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 15em);
+    }
+}
+
+@media (max-width:350px) {
+    body {
+        margin-top: 12em;
+    }
 }

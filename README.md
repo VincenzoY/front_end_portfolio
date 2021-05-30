@@ -1,17 +1,12 @@
 # Front End Practice
 
-This is a compliation of all my (somewhat) polished practice I've done while learning HTML, CSS and JS. 
-Some of the pages are recreations of actual websites while others (mostly the ones involving JS) are designed by myself.
-If you want some insight on each of the pages like what skills were used/learned be sure to check the list below or the README's
-in each seperate project within the lib folder.
+This is a compliation of all my (somewhat polished) practice I've done while learning HTML, CSS and JS. Some of the pages are recreations of actual websites while others (mostly the ones involving JS) are designed by myself. If you want some insight on each of the pages like what skills were used/learned be sure to check the list below or the README's in each seperate project within the lib folder.
 
 ---
 
 # Pages and Insights
 
-(Preface: I am writing some of these comments years after I actually created the page so the insights aren't exactly from the moment
-I finished each project. I have some old README docs from when I last committed to some but they are not very thorough. This mostly applies to 
-the first 5 in the list.)
+(Preface: I am writing some of these comments years after I actually created the page so the insights aren't exactly from the moment I finished each project. I have some old README docs from when I last committed to some but they are not very thorough. This mostly applies tothe first 5 in the list.)
 
 1. **[Google Search Page](/lib/google-homepage) - Based off [TOP Google Homepage Project](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/html-css)**   
   This was the first "large scale" project I attempted. Before this I was mostly learning sytax and doing isolated front end practice. From this project I learned
