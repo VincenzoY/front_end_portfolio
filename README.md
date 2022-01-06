@@ -2,7 +2,7 @@
 
 This is a compliation of all my (somewhat polished) practice I've done while learning HTML, CSS and JS. Some of the pages are recreations of actual websites while others (mostly the ones involving JS) are designed by myself. If you want some insight on each of the pages like what skills were used/learned be sure to check the list below or the README's in each seperate project within the lib folder.
 
-[Visit the Site](https://vincenzoy.github.io/portfolio/)
+[Visit the Site](https://vincenzoy.github.io/front_end_portfolio/)
 
 ---
 
